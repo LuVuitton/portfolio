@@ -1,0 +1,22 @@
+.mainWrapper {
+    height: 100vh;
+    background-color: rgba(119, 136, 153, 0.7);
+}
+
+.container {
+    background-color: rgba(113, 187, 113, 0.28);
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.title {
+    background-color: rgba(255, 228, 196, 0.51);
+}
+
+.text {
+    background-color: rgba(222, 184, 135, 0.47);
+    width: 100%;
+}
+
+

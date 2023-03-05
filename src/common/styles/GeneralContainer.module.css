@@ -1,9 +1,9 @@
 .generalContainer {
-    border: 5px green dashed;
+    /*border: 5px green dashed;*/
+    background-color: rgb(246 251 255 );/*MAIN CONTAINER COLOR*/
     height: 100%;
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }

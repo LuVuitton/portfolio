@@ -3,6 +3,7 @@
     background-color: yellow;
     padding: 30px 0;
     /*width: 100%;*/
+    text-align: center;
 
 }
 
@@ -10,7 +11,7 @@
 .container {
     display: flex;
     /*align-items: center;*/
-    flex-direction: column;
+    /*flex-direction: column;*/
     flex-wrap: wrap;
     justify-content: space-around;
 
@@ -18,7 +19,6 @@
 
 .text {
     border: 1px solid;
-    width: 250px;
     background-color: rgba(66, 110, 66, 0.32);
 }
 
@@ -26,4 +26,12 @@
     width: 150px;
     height: 50px;
     background-color: bisque;
+}
+
+@media screen and (max-width: 800px) {
+    .text {
+        font-size: 15px;
+        color: red;
+    }
+
 }

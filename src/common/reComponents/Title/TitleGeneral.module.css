@@ -1,0 +1,15 @@
+.title {
+    margin: 20px;
+    position: relative;
+
+}
+.title::before{
+    content: '';
+    position: absolute;
+    background: rgb(51 51 51 / 80%);;
+    width: 100px;
+    height: 1px;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}

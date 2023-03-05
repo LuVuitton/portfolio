@@ -1,24 +1,22 @@
 /*добавил мин хай для скилов*/
 .mainWrapper {
-    background-color: rgb(101, 192, 94);
-    padding: 100px 0;
+    /*background-color: rgb(101, 192, 94);*/
+    padding: 50px 0;
     display: flex;
     align-items: center;
 
 }
 
 .container {
-    background-color: rgba(255, 70, 0, 0.99);
+    /*background-color: rgba(255, 70, 0, 0.99);*/
     flex-direction: column;
 }
 
-.title {
-    background-color: rgba(184, 103, 217, 0.98);
-}
+
 
 .projectList {
-    background-color: rgba(126, 93, 51, 0.99);
-    border: 1px solid #7a83bd;
+    /*background-color: rgba(126, 93, 51, 0.99);*/
+    /*border: 1px solid #7a83bd;*/
     width: 100%;
     display: flex;
     justify-content: space-around;

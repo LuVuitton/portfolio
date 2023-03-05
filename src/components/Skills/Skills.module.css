@@ -1,27 +1,26 @@
 /*добавил мин хай для скилов*/
 .mainWrapper {
-
-    background-color: rgb(119, 136, 153);
-    padding: 100px 0;
+    /*background-color: rgb(119, 136, 153);*/
+    padding: 50px 0;
     display: flex;
     align-items: center;
 }
 
 .container {
-    background-color: rgb(113, 187, 113);
+    /*background-color: rgb(113, 187, 113);*/
     flex-direction: column;
     justify-content: flex-start;
 }
 
 
 .title {
-    background-color: rgb(255, 228, 196);
+    /*background-color: rgb(255, 228, 196);*/
 }
 
 {/*h3 сверху и снизу оставляет падинги*/}
 .skillsList {
-    background-color: rgb(222, 184, 135);
-    border: 1px solid red;
+    /*background-color: rgb(222, 184, 135);*/
+    /*border: 1px solid red;*/
     width: 100%;
     display: flex;
     justify-content: space-around;

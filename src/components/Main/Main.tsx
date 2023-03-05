@@ -8,11 +8,11 @@ export const Main = () => {
 
     return (
         <div className={s.mainWrapper}>
-            <div className={`${sContainer.generalContainer} ${s.container}`}>
+            <div className={`${s.container} ${sContainer.generalContainer}`}>
                 <div className={s.text}>
                     <span>Hi</span>
-                    <h1 className={s.text}>Name</h1>
-                    <p>front-end dev</p>
+                    <h1 className={s.title}>Felix Tekhada</h1>
+                    <h3 className={s.text}>front-end developer</h3>
                 </div>
                 <div className={s.photo}>photo</div>
             </div>

@@ -1,0 +1,61 @@
+.mainWrapper {
+  min-width: 280px;
+  width: 35%;
+  /*width: 450px;*/
+  /*background-color: rgba(66, 110, 112, 0.77);*/
+  /*border: 1px solid;*/
+  display: flex;
+  flex-direction: column; /*  сменили главную ось */
+  align-items: center; /*  поэтому это выравнивает уже по оси х  */
+  /*text-align: center;*/
+  .image {
+    /*background-color: rgba(0, 128, 0, 0.5);*/
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &:hover::before {
+      content: "";
+      position: absolute;
+      background-color: black;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.3;
+    }
+
+    .lookButton {
+      width: 100px;
+      height: 40px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+  .title {
+    width: 100%;
+    /*background-color: rgba(0, 70, 128, 0.46);*/
+  }
+  .description {
+    /*background-color: rgba(92, 0, 128, 0.29);*/
+  }
+  .buttons {
+    width: 50%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+  }
+}
+
+
+
+
+
+
+

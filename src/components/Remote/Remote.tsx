@@ -1,6 +1,6 @@
 import React from "react";
-import s from './Remote.module.css'
-import sContainer from '../../common/styles/GeneralContainer.module.css'
+import s from './Remote.module.scss'
+import sContainer from '../../common/styles/GeneralContainer.module.scss'
 
 
 export const Remote = () => {

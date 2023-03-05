@@ -1,6 +1,6 @@
 import React from "react";
-import s from './Form.module.css'
-import sContainer from '../../common/styles/GeneralContainer.module.css'
+import s from './Form.module.scss'
+import sContainer from '../../common/styles/GeneralContainer.module.scss'
 import {TitleGeneral} from "../../common/reComponents/Title/TitleGeneral";
 
 

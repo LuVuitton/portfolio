@@ -1,5 +1,5 @@
 import React from "react";
-import s from './TitleGeneral.module.css'
+import s from './TitleGeneral.module.scss'
 
 export type TitleGeneralType = {
     title: string

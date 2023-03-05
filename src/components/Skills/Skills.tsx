@@ -1,6 +1,6 @@
 import React from "react";
-import s from './Skills.module.css'
-import sContainer from '../../common/styles/GeneralContainer.module.css'
+import s from './Skills.module.scss'
+import sContainer from '../../common/styles/GeneralContainer.module.scss'
 import {OneSkill} from "./OneSkill/OneSkill";
 import {TitleGeneral} from "../../common/reComponents/Title/TitleGeneral";
 

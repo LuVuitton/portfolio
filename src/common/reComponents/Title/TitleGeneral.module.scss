@@ -1,0 +1,14 @@
+.title {
+    margin: 0 0 50px 0 ;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        background:rgba(51,51,51,0.2);
+        width:120%;
+        height: 1px;
+        bottom: -10px;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+}

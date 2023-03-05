@@ -1,5 +1,5 @@
 import React from "react";
-import s from './Nav.module.css'
+import s from './Nav.module.scss'
 
 export const Nav = ()=> {
     return (
@@ -8,7 +8,6 @@ export const Nav = ()=> {
             <a href="">Скилы</a>
             <a href="">Проекты</a>
             <a href="">Контакты</a>
-
         </nav>
     )
 }

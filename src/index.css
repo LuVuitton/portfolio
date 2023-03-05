@@ -5,52 +5,60 @@
     color: rgb(125 119 137); /*main text color*/
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: Poppins, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: 1.2;
-    --tw-text-opacity: 1;
-    color: rgb(51 51 51 / 95%);
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+{
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    outline: none;
 }
 
-h1 {
-    font-size: 45px;
-}
-
-h2 {
-    font-size: 36px;
-}
-
-h3 {
-    font-size: 30px;
-}
-
-h4 {
-    font-size: 24px;
-}
-
-h5 {
-    font-size: 20px;
-}
-
-h6 {
-    font-size: 16px;
-}
 
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.4;
     letter-spacing: 0;
-    color: rgb(51 51 51 / 01%);
     /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',*/
     /*  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/
     /*  sans-serif;*/
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Poppins, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.2;
+    --tw-text-opacity: 1;
+    color: rgb(51 51 51 / 90%);
+
+}
+h1 {
+    font-size: 45px;
+
+}
+h2 {
+    font-size: 16px;
+    letter-spacing: 4px;
+    font-weight: 800;
+}
+
+h3{
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: 800;
+    margin: 0 0 5px;
+    color: rgb(107, 101, 117); /*main text color*/
+
+}
+p {
+    font-size: 14px;
 }
 
 code {

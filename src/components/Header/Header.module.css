@@ -1,7 +1,12 @@
-.header {
-    height: 80px;
-    background-color: lightslategrey;
-    display: flex;
+.container {
+    padding-right: 30px;
+    background-color: white;
     justify-content: flex-end;
+}
+
+.header {
+    /*border: 1px solid green;*/
+    height: 80px;
+    display: flex;
     align-items: center;
 }

@@ -1,26 +1,40 @@
 .mainWrapper {
-    width: 200px;
+    width: 300px;
     background-color: rgba(66, 110, 112, 0.77);
     border: 1px solid;
     display: flex;
     flex-direction: column;/*  сменили главную ось */
     align-items: center; /*  поэтому это выравнивает уже по оси х  */
-    text-align: center;
+    /*text-align: center;*/
 
 }
 
 
-.icon {
+.image {
     background-color: rgba(0, 128, 0, 0.5);
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.lookButton {
 
+}
 
 .title {
+    width: 100%;
     background-color: rgba(0, 70, 128, 0.46);
 }
 
 .description {
     background-color: rgba(92, 0, 128, 0.29);
+}
+
+.buttons {
+    width: 50%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
 }

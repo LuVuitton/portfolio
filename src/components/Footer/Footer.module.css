@@ -1,0 +1,35 @@
+.mainWrapper {
+    background-color: yellow;
+    padding: 30px 0;
+    /*width: 100%;*/
+
+}
+
+/*высота в контейнере на всю высоту родителя mainWrapper*/
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+.text {
+    border: 1px solid;
+    width: 250px;
+    background-color: rgb(66, 110, 66);
+}
+
+.iconsBlock {
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0 15px 0;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    border: green 1px solid;
+}

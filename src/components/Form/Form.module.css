@@ -1,0 +1,41 @@
+.mainWrapper {
+    height: 100vh;
+    background-color: rgb(0, 208, 255);
+}
+
+/*высота в контейнере на всю высоту родителя mainWrapper*/
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.title {
+    border: 1px solid;
+    width: 200px;
+    background-color: rgb(66, 110, 66);
+    margin-bottom: 100px;
+}
+
+.formInput {
+    display: block;
+    width: 200px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+.formTextArea{
+    display: block;
+    width: 202px;
+    height: 200px;
+    margin-bottom: 50px;
+
+}
+
+.button {
+    width: 150px;
+    height: 50px;
+    background-color: bisque;
+}

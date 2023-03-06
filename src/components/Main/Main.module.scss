@@ -1,23 +1,38 @@
 // mainWrapper general color background-color: rgba(255 255 255); /* general color*/
 
 .mainWrapper {
-  height: 100vh;
+  height: calc(100vh - 60px); //минус хэдер
   margin-bottom: 1px;
 
+
   .container {
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    padding-left: 100px;
+
+
+
+    @media screen and (max-width: 650px) {
+      padding-left: 15px;
+    }
 
     .content {
       .title {
-        @media screen and (max-width: 500px) {
-          font-size: 30px;
+        font-size: 60px;
+
+        @media screen and (max-width: 650px) {
+          font-size: 34px;
         }
       }
 
       .text {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 21px;
+        margin-bottom: 40px;
+        white-space: nowrap;
+
         @media screen and (max-width: 500px) {
-          font-size: 20px;
+          font-size: 16px;
         }
       }
     }
@@ -25,7 +40,7 @@
     .photo {
       width: 300px;
       height: 400px;
-      background-color: bisque;
+      background-color: #333333F2;
     }
   }
 }

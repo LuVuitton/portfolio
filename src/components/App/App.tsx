@@ -10,13 +10,15 @@ import {Footer} from "../Footer/Footer";
 
 const App = () => {
     return (
-        <div className={s.App}>
-            <Header />
-            <Main />
-            <Skills />
-            <MyProjects />
-            <Remote/>
-            <Form/>
+        <div className={s.mainWrapper}>
+            <Header/>
+            <div className={s.content}>
+                <Main/>
+                <Skills/>
+                <MyProjects/>
+                <Remote/>
+                <Form/>
+            </div>
             <Footer/>
         </div>
     );

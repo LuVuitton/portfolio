@@ -1,4 +1,5 @@
 @import '../../common/sass/mixins.scss';
+@import '../../common/sass/variables';
 
 
 .mainWrapper {
@@ -37,11 +38,6 @@
         margin-bottom: 50px;
         border: none;
         padding-left: 5px;
-      }
-
-      .button {
-        width: 100px;
-        height: 30px;
       }
     }
 

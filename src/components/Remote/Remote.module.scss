@@ -7,9 +7,9 @@
         flex-wrap: wrap;
         justify-content: space-around;
         .text {
+            margin-bottom: 30px;
             @media screen and (max-width: 800px) {
                     font-size: 15px;
-                    color: red;
             }
         }
 

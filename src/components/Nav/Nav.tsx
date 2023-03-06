@@ -4,10 +4,10 @@ import s from './Nav.module.scss'
 export const Nav = ()=> {
     return (
         <nav className={s.nav}>
-            <a href="">Главная</a>
-            <a href="">Скилы</a>
-            <a href="">Проекты</a>
-            <a href="">Контакты</a>
+            <a href="">Main</a>
+            <a href="">Skill</a>
+            <a href="">Projects</a>
+            <a href="">Get in Touch</a>
         </nav>
     )
 }

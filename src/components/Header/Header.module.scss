@@ -1,7 +1,11 @@
 @import '../../common/sass/mixins.scss';
 
 
-.mainWrapper {
+.mainWrapper{
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
   .container {
     background-color: white;
     padding-right: 30px;
@@ -9,7 +13,7 @@
 
     .header {
       @include flexRowCenter();
-      height: 80px;
+      height: 60px;
     }
   }
 }

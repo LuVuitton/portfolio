@@ -1,6 +1,8 @@
+@import "./src/common/sass/variables";
+@import "./src/common/sass/mixins";
+
 .generalContainer {
-    //border: 5px green dashed
-    background-color: rgba(246, 251, 255, 1);
+    background-color: $mainContainerColor;
     height: 100%;
     width: 90%;
     padding: 0 30px 0 30px;

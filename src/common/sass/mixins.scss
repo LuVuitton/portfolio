@@ -1,0 +1,22 @@
+@mixin flexStandardCentering() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+@mixin flexRowCenter() {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+@mixin flexColumnCenter() {
+  display: flex;
+  flex-direction: column;/*  сменили главную ось */
+  align-items: center; /*  поэтому это выравнивает уже по оси х  */
+  flex-wrap: wrap;
+
+}

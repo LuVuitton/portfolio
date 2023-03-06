@@ -1,5 +1,5 @@
 import React from "react";
-import s from './OneSkill.module.css'
+import s from './OneSkill.module.scss'
 
 
 export const OneSkill = () => {

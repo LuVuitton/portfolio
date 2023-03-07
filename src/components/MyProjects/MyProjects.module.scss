@@ -3,20 +3,23 @@
 
 //добавил мин хай для скилов
 .mainWrapper {
-   @include flexRowCenter();
-    margin-bottom: 1px;
-    .container {
-        flex-direction: column;
-        padding: 50px 0;
-        .projectList {
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+  @include flexRowCenter();
+  margin-bottom: 1px;
 
-        }
+  .container {
+    flex-direction: column;
+    padding: 50px 100px;
+
+    .projectList {
+      gap: 30px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
 
     }
+
+  }
 }
 
 

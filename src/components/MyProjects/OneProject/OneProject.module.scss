@@ -3,7 +3,7 @@
 
 .mainWrapper {
   min-width: 280px;
-  width: 35%;
+  width: 45%;
   @include flexColumnCenter();
 
   .image {
@@ -13,6 +13,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    margin-bottom: 10px;
 
     &:hover::before {
       content: "";
@@ -42,9 +43,8 @@
     /*background-color: rgba(92, 0, 128, 0.29);*/
   }
 
-  .buttons {
-    width: 50%;
-    height: 30px;
+  .buttons{
+    gap: 2px;
     display: flex;
     justify-content: space-around;
     margin: 10px 0;

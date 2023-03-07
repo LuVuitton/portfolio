@@ -10,7 +10,7 @@ import {v1} from "uuid";
 
 export const MyProjects = () => {
 
-    const oneProjectStyle = [
+    const oneProjectData = [
         {
             id: v1(),
             bgImg: {backgroundImage: `url(${todo})`},
@@ -24,13 +24,22 @@ export const MyProjects = () => {
             description: 'e come facebook'
         }
     ]
+    const generalStyles = {
+        buttonsStyle: {padding: '5px 20px'},
+        lookBtnStyle: {
+            zIndex: '1'
+        }
+    }
 
-    const mappedProjects = oneProjectStyle.map(e => {
+
+    const mappedProjects = oneProjectData.map(e => {
         return <OneProject
             key={e.id}
             projectName={e.projectName}
             description={e.description}
-            style={e.bgImg}
+            bgImg={e.bgImg}
+            btnStyle={generalStyles.buttonsStyle}
+            lookBtnStyle={generalStyles.lookBtnStyle}
         />
     })
 

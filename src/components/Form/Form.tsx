@@ -14,10 +14,10 @@ const formFun = ()=>console.log('hi')
 
                 <form action="#" className={s.formContainer}>
                     <TitleGeneral title={'contacts'}/>
-                    <input className={s.formInput} type="text" name="name" value="name"/>
-                    <input className={s.formInput} type="text" name="company" value="company"/>
-                    <input className={s.formInput} type="text" name="link" value="link for feedback"/>
-                    <textarea className={s.formTextArea} name="message"/>
+                    <input className={s.formInput} type="text" name="name" placeholder="name"/>
+                    <input className={s.formInput} type="text" name="company" placeholder="company"/>
+                    <input className={s.formInput} type="text" name="link" placeholder="link for feedback"/>
+                    <textarea className={s.formTextArea} name="message" placeholder="message"/>
                     <ButtonGeneral type="submit" title={'form'} callback={formFun}/>
                 </form>
 

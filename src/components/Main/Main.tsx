@@ -5,7 +5,6 @@ import {ButtonGeneral} from "../../common/reComponents/ButtonGeneral/ButtonGener
 
 
 export const Main = () => {
-    console.log('state')
 
     const string = 'front end developer'
     const arrText = Array.from(string)
@@ -13,7 +12,7 @@ export const Main = () => {
 
     let [text, setText] = useState<string[]>([])
     let [switcher, setSwitcher] = useState<boolean>(false)
-    let [timer, setTimer] = useState(true)
+    let [timer, setTimer] = useState(false)
 
 
     useEffect(() => {
@@ -60,8 +59,11 @@ export const Main = () => {
                     <h3 className={s.text}>{text}</h3>
                     <ButtonGeneral type="button" title={'Get in Touch'} callback={() => {
                     }}/>
-                    <button onClick={() => setTimer(false)}>OFF</button>
-                    <button onClick={() => setTimer(true)}>ON</button>
+<div>
+                    <button onClick={() => setTimer(false)}>OFF writing</button>
+                    <button onClick={() => setTimer(true)}>ON writing</button>
+</div>
+                    впечатывание пока что через кнопку, будет через хук, но пока через кнопку)
 
                 </div>
                 {/*<div className={s.photo}>photo</div>*/}

@@ -8,28 +8,46 @@ export const Main = () => {
     console.log('state')
 
     const string = 'front end developer'
-    const arrText =  Array.from(string)
+    const arrText = Array.from(string)
 
-    let [text, setText] = useState<Array<string>>([])
-    // let [x, setX] = useState(true)
+
+    let [text, setText] = useState<string[]>([])
+    let [switcher, setSwitcher] = useState<boolean>(false)
+    let [timer, setTimer] = useState(true)
+
 
     useEffect(() => {
         const newArr: string[] = []
         let i = 0
-        console.log('in effect')
+        if (!switcher && timer) {
+            const x = setInterval(() => {
+                if (i < arrText.length) {
+                    setText([...newArr, arrText[i]])
+                    newArr.push(arrText[i])
+                    i++
+                } else {
+                    clearInterval(x)
+                    setSwitcher(true)
+                }
+            }, 200)
+        }
+    }, [switcher, timer])
 
-     const x = setInterval(() => {
-            if (i < arrText.length) {
-                setText([...newArr, arrText[i]])
-                newArr.push(arrText[i])
-                i++
-            } else {
-                newArr.pop()
-                setText([...newArr])
-                i--
-            }
-        }, 90000)
-    }, [])
+    useEffect(() => {
+        const newArr: string[] = text
+        if (switcher && timer) {
+            const x = setInterval(() => {
+                if (newArr.length > 0) {
+                    newArr.pop()
+                    setText([...newArr])
+
+                } else {
+                    clearInterval(x)
+                    setSwitcher(false)
+                }
+            }, 200)
+        }
+    }, [switcher, timer])
 
 
     return (
@@ -42,6 +60,8 @@ export const Main = () => {
                     <h3 className={s.text}>{text}</h3>
                     <ButtonGeneral type="button" title={'Get in Touch'} callback={() => {
                     }}/>
+                    <button onClick={() => setTimer(false)}>OFF</button>
+                    <button onClick={() => setTimer(true)}>ON</button>
 
                 </div>
                 {/*<div className={s.photo}>photo</div>*/}

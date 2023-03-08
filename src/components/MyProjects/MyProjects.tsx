@@ -9,6 +9,7 @@ import {v1} from "uuid";
 
 
 export const MyProjects = () => {
+    console.log('myprojects')
 
     const oneProjectData = [
         {

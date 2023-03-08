@@ -5,6 +5,7 @@ import sContainer from '../../common/styles/GeneralContainer.module.scss'
 
 
 export const Header = () => {
+    console.log('header')
 
 
     return (

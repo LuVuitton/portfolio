@@ -8,8 +8,8 @@ export type ButtonGeneralPropsType = {
     style?: any
 }
 
-export const ButtonGeneral = (props: ButtonGeneralPropsType) => {
-    console.log(props)
+export const ButtonGeneral = React.memo((props: ButtonGeneralPropsType) => {
+    console.log('button general')
     return (
         <button
             type={props.type}
@@ -20,4 +20,4 @@ export const ButtonGeneral = (props: ButtonGeneralPropsType) => {
             {props.title}
         </button>
     )
-}
+})

@@ -34,18 +34,21 @@ export const MyProjects = () => {
 
 
     const mappedProjects = oneProjectData.map(e => {
-        return <OneProject
-            key={e.id}
-            projectName={e.projectName}
-            description={e.description}
-            bgImg={e.bgImg}
-            btnStyle={generalStyles.buttonsStyle}
-            lookBtnStyle={generalStyles.lookBtnStyle}
-        />
+        return (
+
+            <OneProject
+                key={e.id}
+                projectName={e.projectName}
+                description={e.description}
+                bgImg={e.bgImg}
+                btnStyle={generalStyles.buttonsStyle}
+                lookBtnStyle={generalStyles.lookBtnStyle}
+            />
+        )
     })
 
     return (
-        <div className={s.mainWrapper}>
+        <div className={s.mainWrapper} id={'projectsBlock'}>
             <div className={`${sContainer.generalContainer} ${s.container}`}>
 
                 <TitleGeneral title={'myprojects'}/>

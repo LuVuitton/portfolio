@@ -10,7 +10,7 @@ export const Footer = () => {
         <footer className={s.mainWrapper}>
             <div className={`${sContainer.generalContainer} ${s.container}`}>
 
-                <h3 className={s.text}>Name</h3>
+                <h3 className={s.text}>FELIX TEKHADA</h3>
 
                 <div className={s.iconsBlock}>
                     <div className={s.icon}>icon</div>

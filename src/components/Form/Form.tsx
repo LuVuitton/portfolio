@@ -3,6 +3,7 @@ import s from './Form.module.scss'
 import sContainer from '../../common/styles/GeneralContainer.module.scss'
 import {TitleGeneral} from "../../common/reComponents/Title/TitleGeneral";
 import {ButtonGeneral} from "../../common/reComponents/ButtonGeneral/ButtonGeneral";
+import {Fade} from "react-awesome-reveal";
 
 
 export const Form = () => {
@@ -18,7 +19,10 @@ const formFun = ()=>console.log('hi')
                     <input className={s.formInput} type="text" name="company" placeholder="company"/>
                     <input className={s.formInput} type="text" name="link" placeholder="link for feedback"/>
                     <textarea className={s.formTextArea} name="message" placeholder="message"/>
+                    <Fade triggerOnce={true} direction={'down'}>
                     <ButtonGeneral type="submit" title={'form'} callback={formFun}/>
+                        </Fade>
+
                 </form>
 
 

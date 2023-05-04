@@ -1,5 +1,15 @@
+@import "./src/common/sass/variables";
+
+
+
 .nav {
     width: 280px;
     display: flex;
     justify-content: space-between;
+
+}
+
+.active {
+    color: white ;
+    background-color:   $generalTitleColor;
 }

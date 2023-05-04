@@ -10,7 +10,12 @@
     flex-wrap: wrap;
     padding-left: 100px;
 
-
+.particles{
+  width: 100vh;
+  height: 100vh;
+  z-index: 1;
+  display: block;
+}
 
     @media screen and (max-width: 650px) {
       padding-left: 15px;

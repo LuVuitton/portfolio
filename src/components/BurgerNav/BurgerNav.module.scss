@@ -1,0 +1,115 @@
+@import "./src/common/sass/variables";
+@import "./src/common/sass/mixins";
+
+.mainWrapper {
+
+  .burgerNav {
+    width: 100%;
+    //position: relative;
+    .items {
+      position: absolute;
+      right: 0;
+      top: 70px;
+      width: 180px;
+      height: 70vh;
+      background-color: #ffffff;
+      transform: translate(180px, 0);
+      transition: 0.7s;
+
+
+      a {
+        text-align: end;
+        width: 100%;
+        font-size: 15px;
+        //border: #333333 solid 1px;
+        padding: 10px 10px 10px 0;
+      }
+
+      :hover {
+        background-color: $generalTitleColor;
+        color: white;
+      }
+
+      @include flexColumnCenter();
+      align-items: end;
+
+    }
+    .show {
+      transform: translate(0, 0);
+      transition: 0.7s;
+    }
+
+
+    .burgerButton {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 9999;
+
+      span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 30px;
+        background-color: #333333;
+        transition: transform 0.3s ease;
+      }
+
+      span:nth-of-type(1) {
+        top: 13px;
+        left: 5px;
+        transform-origin: center;
+        transform: rotate(0deg) translate(0, 0);
+      }
+
+      span:nth-of-type(2) {
+        top: 19px;
+        left: 5px;
+        opacity: 1;
+      }
+
+      span:nth-of-type(3) {
+        top: 25px;
+        left: 5px;
+        transform-origin: center;
+        transform: rotate(0deg) translate(0, 0);
+      }
+
+      &.burgerButtonShow {
+        span:nth-of-type(1) {
+          transform: rotate(45deg) translate(0, -6px);
+        }
+
+        span:nth-of-type(2) {
+          opacity: 0;
+        }
+
+        span:nth-of-type(3) {
+          transform: rotate(-45deg) translate(0, 6px);
+        }
+      }
+    }
+
+
+
+
+
+
+    @media screen and (min-width: 571px) {
+        display: none;
+      }
+    }
+  }
+
+.active {
+  color: white;
+  background-color: $generalTitleColor;
+}
+
+
+

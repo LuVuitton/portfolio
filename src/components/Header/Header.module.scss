@@ -1,19 +1,28 @@
-@import '../../common/sass/mixins.scss';
+@import './src/common/sass/mixins';
+@import './src/common/sass/variables';
 
 
-.mainWrapper{
-  position: sticky;
+.mainWrapper {
+  position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 1;
+  width: 100%;
 
   .container {
     background-color: white;
-    padding-right: 30px;
     justify-content: flex-end;
+    //width: 100%;
 
     .header {
-      @include flexRowCenter();
+
       height: 60px;
+
+
+      .active {
+        color: white ;
+        background-color: $generalTitleColor;
+      }
     }
   }
+
 }

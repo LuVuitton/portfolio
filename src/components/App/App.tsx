@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from './App.module.scss';
 import {Header} from '../Header/Header';
 import {Main} from "../Main/Main";
@@ -9,9 +9,22 @@ import {Form} from "../Form/Form";
 import {Footer} from "../Footer/Footer";
 
 const App = () => {
+    console.log('app')
+    const [showBurger, setShowBurger] = useState(false)
+
+
+    const showBurgerHandler = () => {
+        setShowBurger(true)
+    }
+    const hideBurgerHandler = () => {
+       showBurger && setShowBurger(false)
+    }
+
+
+
     return (
-        <div className={s.mainWrapper}>
-            <Header/>
+        <div className={s.mainWrapper} onClick={hideBurgerHandler} >
+            <Header showBurger={showBurger} showBurgerHandler={showBurgerHandler} hideBurgerHandler={hideBurgerHandler}/>
             <div className={s.content}>
                 <Main/>
                 <Skills/>

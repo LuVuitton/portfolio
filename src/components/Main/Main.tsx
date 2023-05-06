@@ -30,42 +30,42 @@ export const Main = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-    // useEffect(() => {
-    //
-    //     const newArr: string[] = []
-    //     let i = 0
-    //     if (!switcher && timer && !inProcess) {
-    //         setInProcess(true)
-    //         const x = setInterval(() => {
-    //             if (i < arrText.length) {
-    //                 setText([...newArr, arrText[i]])
-    //                 newArr.push(arrText[i])
-    //                 i++
-    //             } else {
-    //                 clearInterval(x)
-    //                 setSwitcher(true)
-    //                 setInProcess(false)
-    //             }
-    //         }, 200)
-    //     }
-    // }, [switcher, timer])
-    // useEffect(() => {
-    //     const newArr: string[] = text
-    //     if (switcher && timer && !inProcess) {
-    //         setInProcess(true)
-    //         const x = setInterval(() => {
-    //             if (newArr.length > 0) {
-    //                 newArr.pop()
-    //                 setText([...newArr])
-    //
-    //             } else {
-    //                 clearInterval(x)
-    //                 setSwitcher(false)
-    //                 setInProcess(false)
-    //             }
-    //         }, 200)
-    //     }
-    // }, [switcher, timer])
+    useEffect(() => {
+
+        const newArr: string[] = []
+        let i = 0
+        if (!switcher && timer && !inProcess) {
+            setInProcess(true)
+            const x = setInterval(() => {
+                if (i < arrText.length) {
+                    setText([...newArr, arrText[i]])
+                    newArr.push(arrText[i])
+                    i++
+                } else {
+                    clearInterval(x)
+                    setSwitcher(true)
+                    setInProcess(false)
+                }
+            }, 200)
+        }
+    }, [switcher, timer])
+    useEffect(() => {
+        const newArr: string[] = text
+        if (switcher && timer && !inProcess) {
+            setInProcess(true)
+            const x = setInterval(() => {
+                if (newArr.length > 0) {
+                    newArr.pop()
+                    setText([...newArr])
+
+                } else {
+                    clearInterval(x)
+                    setSwitcher(false)
+                    setInProcess(false)
+                }
+            }, 200)
+        }
+    }, [switcher, timer])
 
 
     const handleScroll = () => {
@@ -88,7 +88,7 @@ export const Main = () => {
 
 
     return (
-        <div className={s.mainWrapper}>
+        <div className={s.mainWrapper} id={'main'}>
             <div className={`${s.container} ${sContainer.generalContainer}`}>
                     {/*<Particles className={s.particles} params={particlesOpt} />*/}
 

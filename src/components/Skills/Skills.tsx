@@ -9,7 +9,7 @@ export const Skills = () => {
 
 
     return (
-        <div className={s.mainWrapper}>
+        <div className={s.mainWrapper} id={ 'skills'}>
             <div className={`${sContainer.generalContainer} ${s.container}`}>
                 <TitleGeneral title={'skills'}/>
                 <div className={s.skillsList}>

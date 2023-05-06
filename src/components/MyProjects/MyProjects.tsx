@@ -8,8 +8,7 @@ import social from './../../../src/assets/image/social.png'
 import {v1} from "uuid";
 
 
-export const MyProjects = () => {
-    console.log('myprojects')
+export const MyProjects = React.memo(() => {
 
     const oneProjectData = [
         {
@@ -35,7 +34,6 @@ export const MyProjects = () => {
 
     const mappedProjects = oneProjectData.map(e => {
         return (
-
             <OneProject
                 key={e.id}
                 projectName={e.projectName}
@@ -48,7 +46,7 @@ export const MyProjects = () => {
     })
 
     return (
-        <div className={s.mainWrapper} id={'projectsBlock'}>
+        <div className={s.mainWrapper} id={'projects'}>
             <div className={`${sContainer.generalContainer} ${s.container}`}>
 
                 <TitleGeneral title={'myprojects'}/>
@@ -61,5 +59,5 @@ export const MyProjects = () => {
         </div>
 
     )
-}
+})
 

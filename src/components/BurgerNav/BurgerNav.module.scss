@@ -34,82 +34,36 @@
       align-items: end;
 
     }
+
     .show {
       transform: translate(0, 0);
       transition: 0.7s;
     }
 
 
-    .burgerButton {
+    .burgerButtonWrapper {
       position: fixed;
       top: 20px;
-      right: 20px;
-      width: 40px;
-      height: 40px;
+      right: 8px;
+      width: 82px;
+      height: 39px;
       background-color: transparent;
-      border: none;
-      cursor: pointer;
       z-index: 9999;
-
-      span {
-        display: block;
-        position: absolute;
-        height: 3px;
-        width: 30px;
-        background-color: #333333;
-        transition: transform 0.3s ease;
-      }
-
-      span:nth-of-type(1) {
-        top: 13px;
-        left: 5px;
-        transform-origin: center;
-        transform: rotate(0deg) translate(0, 0);
-      }
-
-      span:nth-of-type(2) {
-        top: 19px;
-        left: 5px;
-        opacity: 1;
-      }
-
-      span:nth-of-type(3) {
-        top: 25px;
-        left: 5px;
-        transform-origin: center;
-        transform: rotate(0deg) translate(0, 0);
-      }
-
-      &.burgerButtonShow {
-        span:nth-of-type(1) {
-          transform: rotate(45deg) translate(0, -6px);
-        }
-
-        span:nth-of-type(2) {
-          opacity: 0;
-        }
-
-        span:nth-of-type(3) {
-          transform: rotate(-45deg) translate(0, 6px);
-        }
-      }
-    }
+      //border: 1px solid black;
 
 
-
-
-
-
-    @media screen and (min-width: 571px) {
+    @media screen and (min-width: 821px) {
         display: none;
       }
     }
+
+
   }
 
-.active {
-  color: white;
-  background-color: $generalTitleColor;
+  .active {
+    color: white;
+    background-color: $generalTitleColor;
+  }
 }
-
 
 

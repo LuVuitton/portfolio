@@ -17,15 +17,16 @@ const App = () => {
         setShowBurger(true)
     }
     const hideBurgerHandler = () => {
-       showBurger && setShowBurger(false)
+        showBurger && setShowBurger(false)
     }
 
 
-
     return (
-        <div className={s.mainWrapper} onClick={hideBurgerHandler} >
-            <Header showBurger={showBurger} showBurgerHandler={showBurgerHandler} hideBurgerHandler={hideBurgerHandler}/>
+        <div className={s.mainWrapper} onClick={hideBurgerHandler}>
+            <Header showBurger={showBurger} showBurgerHandler={showBurgerHandler}
+                    hideBurgerHandler={hideBurgerHandler}/>
             <div className={s.content}>
+
                 <Main/>
                 <Skills/>
                 <MyProjects/>

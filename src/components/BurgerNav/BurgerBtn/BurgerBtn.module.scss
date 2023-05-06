@@ -1,0 +1,51 @@
+@import "./src/common/sass/variables";
+
+
+.toggleHamburger {
+  position: relative;
+  width: 40px;
+  height: 32px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 3;
+}
+
+.line {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: rgba(51, 51, 51, 0.86);
+  border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.line:nth-child(1) {
+  top: 0;
+  transform-origin: center top;
+}
+
+.line:nth-child(2) {
+  top: 14px;
+  transform-origin: center center;
+}
+
+.line:nth-child(3) {
+  top: 28px;
+  transform-origin: center bottom;
+}
+
+.active .line:nth-child(1) {
+  transform: rotate(45deg);
+  top: 12px;
+}
+
+.active .line:nth-child(2) {
+  transform: scale(0);
+}
+
+.active .line:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 11px;
+}

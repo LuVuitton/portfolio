@@ -71,11 +71,11 @@ export const Main = () => {
     const handleScroll = () => {
         const scrollValue = window.scrollY
         if (scrollValue < displayHeight) {
-            console.log('text on')
+            // console.log('text on')
             setTimer(true)
         }
         if (scrollValue > displayHeight && scrollValue < displayHeight + 100) {
-            console.log('text off')
+            // console.log('text off')
             setTimer(false)
         }
 

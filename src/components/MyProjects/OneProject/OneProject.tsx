@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import s from './OneProject.module.scss'
 import {ButtonGeneral} from "../../../common/reComponents/ButtonGeneral/ButtonGeneral";
 import {Slide} from "react-awesome-reveal";
@@ -34,10 +34,20 @@ const defaultOptions = {
 
 export const OneProject = (props: OneProjectPropsType) => {
 
+    const [visible, setVisible] = useState(false)
+
+    const onVisibilityChangeHandler = (inView: boolean, entry: IntersectionObserverEntry) => {
+        if (inView && !visible) {
+            setVisible(true);
+        }
+    }
+
+
     console.log('one pro')
     return (
-        <Slide triggerOnce={true} delay={100}>
-            <Tilt options={defaultOptions}>
+        <Slide triggerOnce={true} delay={100} onVisibilityChange={onVisibilityChangeHandler}>
+
+                <Tilt options={defaultOptions} style={{ opacity: visible ? 1 : 0, transition: 'opacity 0.5s' }}>
                 <div className={s.mainWrapper}>
                     <div className={s.image} style={props.bgImg}>
                         <ButtonGeneral style={props.lookBtnStyle} type="button" title={'look'} callback={() => {
@@ -53,6 +63,7 @@ export const OneProject = (props: OneProjectPropsType) => {
                     </div>
                 </div>
             </Tilt>
+
         </Slide>
     )
 }

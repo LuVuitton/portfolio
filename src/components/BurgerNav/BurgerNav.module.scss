@@ -44,7 +44,7 @@
     .burgerButtonWrapper {
       position: fixed;
       top: 20px;
-      right: 8px;
+      right: 3%;
       width: 82px;
       height: 39px;
       background-color: transparent;
@@ -52,7 +52,7 @@
       //border: 1px solid black;
 
 
-    @media screen and (min-width: 821px) {
+    @media screen and (min-width: 1025px) {
         display: none;
       }
     }

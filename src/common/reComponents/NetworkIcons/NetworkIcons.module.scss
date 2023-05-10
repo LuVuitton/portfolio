@@ -1,23 +1,23 @@
-@import '../../common/sass/mixins.scss';
+@import './src/common/sass/mixins';
 
 .mainWrapper {
-
   .container {
-    @include flexColumnCenter();
-    background-color: white;
-    padding: 20px 0;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
+    background-color: transparent;
+
+    //@include flexColumnCenter();
+    //background-color: white;
+    //padding: 20px 0;
+    //flex-wrap: wrap;
+    //justify-content: space-around;
+    //width: 100%;
 
 
-    .text {
-    }
+
 
     .iconsBlock {
       width: 250px;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       text-align: center;
       margin: 15px 0 15px 0;
 
@@ -26,6 +26,7 @@
         height: 35px;
         background-size: cover;
         padding: 2px 0;
+        margin: 0 3px;
 
         .icon {
           max-width: 100%;
@@ -36,11 +37,11 @@
           position: relative;
           margin-bottom: 10px;
           opacity: 65%;
-          border-radius: 5px;
+          border-radius: 7px;
           transition: opacity 0.2s;
 
           &:hover {
-            opacity: 80%;
+            opacity: 90%;
           }
         }
 

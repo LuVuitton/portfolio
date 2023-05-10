@@ -3,7 +3,6 @@ import s from './Main.module.scss'
 import sContainer from '../../common/styles/GeneralContainer.module.scss'
 import {ButtonGeneral} from "../../common/reComponents/ButtonGeneral/ButtonGeneral";
 import {Flip} from "react-awesome-reveal";
-// import Particles from "react-tsparticles";
 
 
 

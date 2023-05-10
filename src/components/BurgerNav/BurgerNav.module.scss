@@ -10,10 +10,10 @@
       position: absolute;
       right: 0;
       top: 70px;
-      width: 180px;
+      width: 220px;
       height: 70vh;
       background-color: #ffffff;
-      transform: translate(180px, 0);
+      transform: translate(230px, 0);
       transition: 0.7s;
 
 
@@ -22,12 +22,13 @@
         width: 100%;
         font-size: 15px;
         //border: #333333 solid 1px;
-        padding: 10px 10px 10px 0;
+        padding: 10px 15px 10px 0;
+        font-weight: bold;
       }
 
       :hover {
-        background-color: $generalTitleColor;
-        color: white;
+        //background-color: $generalTitleColor;
+        color: rgba(0, 0, 0, 0.14);
       }
 
       @include flexColumnCenter();
@@ -38,6 +39,12 @@
     .show {
       transform: translate(0, 0);
       transition: 0.7s;
+    }
+
+    .icons {
+      width: 100%;
+      padding-right: 20px;
+      margin-top: auto;
     }
 
 
@@ -52,7 +59,7 @@
       //border: 1px solid black;
 
 
-    @media screen and (min-width: 1025px) {
+      @media screen and (min-width: 1025px) {
         display: none;
       }
     }

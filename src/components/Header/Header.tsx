@@ -34,7 +34,7 @@ export const Header = (props:HeaderPropsType) => {
             // spyThrottle={500}
             onClick={props.hideBurgerHandler}
         >
-            {e}
+            {e.charAt(0).toUpperCase() + e.slice(1)}
         </Link>
     })
 

@@ -2,12 +2,12 @@ import React from "react";
 import s from './Remote.module.scss'
 import sContainer from '../../common/styles/GeneralContainer.module.scss'
 import {ButtonGeneral} from "../../common/reComponents/ButtonGeneral/ButtonGeneral";
-import {log} from "util";
+import {Link} from "react-scroll";
 
 
 export const Remote = () => {
 
-    const remoteFun = ()=> console.log('remote')
+    const remoteHandler = ()=> {}
 
 
     return (
@@ -16,9 +16,18 @@ export const Remote = () => {
 
                 <h3 className={s.text}>looking into remote work options</h3>
 
-                <ButtonGeneral type="button" title={'remote'} callback={remoteFun}/>
+                <Link
+                    to={'get in touch'}
+                    spy={true}
+                    smooth={true}
+                    offset={-90}
+                    duration={500}
+                >
+                    <ButtonGeneral type="button" title={'remote'} callback={remoteHandler}/>
+                </Link>
 
             </div>
         </div>
     )
 }
+

@@ -4,9 +4,12 @@ import sContainer from '../../common/styles/GeneralContainer.module.scss'
 import {TitleGeneral} from "../../common/reComponents/Title/TitleGeneral";
 import {ButtonGeneral} from "../../common/reComponents/ButtonGeneral/ButtonGeneral";
 import {Fade} from "react-awesome-reveal";
-import {callbackAPI} from "../../DAL/CallbackAPI";
 import {useFormik} from "formik";
+import {appThunk, FormikValuesType} from "../../redux/reducers/appReducer";
+import {RootStateType, useCustomThunkDispatch} from "../../redux/store";
+import {useSelector} from "react-redux";
 
+export type BtnStatus = 'normal'|'loading'
 
 export const Form = () => {
     const [visible, setVisible] = useState(false)
@@ -15,6 +18,10 @@ export const Form = () => {
             setVisible(true);
         }
     }
+
+    // const [btnStatus, setBtnStatus] = useState<BtnStatus>('normal')
+    const dispatch = useCustomThunkDispatch()
+    const appStatus = useSelector((state:RootStateType)=> state.app.appStatus)
 
 
     const formik = useFormik({
@@ -37,10 +44,11 @@ export const Form = () => {
             return errors
         },
         onSubmit: (values: FormikValuesType) => {
-            formik.resetForm()
-            // dispatch(authThunk.login({data: values}))
-            //do request
-            callbackAPI.sendDataForFeedback(values)
+            // callbackAPI.sendDataForFeedback(values)
+          dispatch(appThunk.sendContactData(values))
+              .then(r=> {
+                  r.payload?.resetForm && formik.resetForm()
+              })
         },
     })
 
@@ -72,13 +80,11 @@ export const Form = () => {
 
                     <Fade triggerOnce={true} direction={'down'} delay={100}
                           onVisibilityChange={onVisibilityChangeHandler}>
-                        <ButtonGeneral type="submit" title={'form'} callback={() => {
-                        }} style={{opacity: visible ? 1 : 0, transition: 'opacity 0.5s'}}/>
+                        <ButtonGeneral status={appStatus} type="submit" title={'get in touch'} callback={() => {
+                        }} style={{opacity: visible ? 1 : 0, transition: 'opacity 0.5s',width: '172px', height: '50px' }}/>
                     </Fade>
 
                 </form>
-
-
             </div>
         </div>
     )
@@ -90,10 +96,4 @@ type FormikErrorType = {
     password?: string
 }
 
-type FormikValuesType = {
-    email: string
-    message: string
-    name:string
-    company: string
-    otherContacts: string
-}
+

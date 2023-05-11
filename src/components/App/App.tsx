@@ -7,9 +7,10 @@ import {MyProjects} from "../MyProjects/MyProjects";
 import {Remote} from "../Remote/Remote";
 import {Form} from "../Form/Form";
 import {Footer} from "../Footer/Footer";
+import {ErrorSnackbar} from "../ErrorSnackbar/ErrorSnackbar";
 
 const App = () => {
-    console.log('app')
+    // console.log('app')
     const [showBurger, setShowBurger] = useState(false)
 
 
@@ -28,13 +29,14 @@ const App = () => {
             <div className={s.content}>
 
                 <Main/>
-                <Skills/>
                 <MyProjects/>
                 <Remote/>
+                <Skills/>
                 <Form/>
 
             </div>
             <Footer/>
+            <ErrorSnackbar/>
         </div>
     );
 }

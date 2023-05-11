@@ -5,12 +5,11 @@
 
   .burgerNav {
     width: 100%;
-    //position: relative;
     .items {
       position: absolute;
       right: 0;
       top: 70px;
-      width: 220px;
+      width: 200px;
       height: 70vh;
       background-color: #ffffff;
       transform: translate(230px, 0);
@@ -23,7 +22,7 @@
         font-size: 15px;
         //border: #333333 solid 1px;
         padding: 10px 15px 10px 0;
-        font-weight: bold;
+        //font-weight: bold;
       }
 
       :hover {
@@ -43,7 +42,7 @@
 
     .icons {
       width: 100%;
-      padding-right: 20px;
+      //padding-right: 20px;
       margin-top: auto;
     }
 

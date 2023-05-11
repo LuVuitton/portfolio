@@ -19,10 +19,16 @@
       .formInput {
         display: block;
         width: 100%;
-        height: 25px;
+        height: 30px;
         margin-bottom: 10px;
         border: none;
         padding-left: 5px;
+        &:focus {
+          outline: none;
+          border: 3px solid #edf4fa;
+        }
+
+
       }
 
       .formTextArea {
@@ -32,6 +38,11 @@
         margin-bottom: 50px;
         border: none;
         padding-left: 5px;
+        resize: none;
+        &:focus {
+          outline: none;
+          border: 3px solid #edf4fa;
+        }
       }
     }
 

@@ -3,6 +3,7 @@ import s from './Main.module.scss'
 import sContainer from '../../common/styles/GeneralContainer.module.scss'
 import {ButtonGeneral} from "../../common/reComponents/ButtonGeneral/ButtonGeneral";
 import {Flip} from "react-awesome-reveal";
+import {Link} from "react-scroll";
 
 
 
@@ -82,7 +83,6 @@ export const Main = () => {
     };
 
     const buttonHandler = useCallback(() => {
-        console.log('buttonHandler')
     }, [])
 
 
@@ -98,7 +98,16 @@ export const Main = () => {
                     <h1 className={s.title}>Felix Tekhada</h1>
                     <h3 className={s.text}> {'>'} {text}</h3>
                     <Flip direction={'horizontal'} triggerOnce={true} delay={200}>
-                    <ButtonGeneral type="button" title={'Get in Touch'} callback={buttonHandler}/>
+                        <Link
+                            to={'get in touch'}
+                            spy={true}
+                            smooth={true}
+                            offset={-90}
+                            duration={500}
+                        >
+                            <ButtonGeneral type="button" title={'Get in Touch'} callback={buttonHandler}/>
+                        </Link>
+
                     </Flip>
 
                 </div>

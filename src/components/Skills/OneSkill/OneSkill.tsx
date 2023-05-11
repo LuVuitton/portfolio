@@ -3,7 +3,7 @@ import {Fade} from "react-awesome-reveal";
 import s from './OneSkill.module.scss'
 
 
-export const OneSkill = () => {
+export const OneSkill = (props:OneSkillPropsType) => {
 
     const [visible, setVisible] = useState(false)
 
@@ -15,15 +15,27 @@ export const OneSkill = () => {
 
 
     return (
-        <Fade direction={"down"} triggerOnce={true} duration={1000} delay={100} onVisibilityChange={onVisibilityChangeHandler}>
-                <div className={s.mainWrapper} style={{ opacity: visible ? 1 : 0, transition: 'opacity 0.5s' }}>
-                    <div className={s.icon}>icon</div>
-                    <h3 className={s.title}>REACT</h3>   {/*h3 сверху и снизу оставляет падинги*/}
-                    <p className={s.description}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad dolorem
-                        explicabo, nesciunt nobis quos repudiandae suscipit! Animi aperiam commodi dolorum earum, ex
-                        excepturi facilis illo placeat quaerat ratione sed.</p>
+        <Fade direction={"down"} triggerOnce={true} duration={1000} delay={100}
+              onVisibilityChange={onVisibilityChangeHandler}>
+            <div className={s.mainWrapper} style={{opacity: visible ? 1 : 0, transition: 'opacity 0.5s'}}>
+
+
+                <div className={s.iconWrapper}>
+                    <img className={`${s.icon}`} src={props.skillImg} alt="LinkedIn"/>
                 </div>
+
+
+                <h3 className={s.title}>{props.skillTitle}</h3>   {/*h3 сверху и снизу оставляет падинги*/}
+                <p className={s.description}>{props.skillDescription}</p>
+            </div>
 
         </Fade>
     )
+}
+
+
+type OneSkillPropsType = {
+    skillImg:string,
+    skillTitle:string,
+    skillDescription:string
 }

@@ -9,7 +9,6 @@ import {appThunk, FormikValuesType} from "../../redux/reducers/appReducer";
 import {RootStateType, useCustomThunkDispatch} from "../../redux/store";
 import {useSelector} from "react-redux";
 
-export type BtnStatus = 'normal'|'loading'
 
 export const Form = () => {
     const [visible, setVisible] = useState(false)
@@ -21,12 +20,12 @@ export const Form = () => {
 
     // const [btnStatus, setBtnStatus] = useState<BtnStatus>('normal')
     const dispatch = useCustomThunkDispatch()
-    const appStatus = useSelector((state:RootStateType)=> state.app.appStatus)
+    const appStatus = useSelector((state: RootStateType) => state.app.appStatus)
 
 
     const formik = useFormik({
         initialValues: {
-            name:'',
+            name: '',
             company: '',
             email: '',
             message: '',
@@ -45,10 +44,10 @@ export const Form = () => {
         },
         onSubmit: (values: FormikValuesType) => {
             // callbackAPI.sendDataForFeedback(values)
-          dispatch(appThunk.sendContactData(values))
-              .then(r=> {
-                  r.payload?.resetForm && formik.resetForm()
-              })
+            dispatch(appThunk.sendContactData(values))
+                .then(r => {
+                    r.payload?.resetForm && formik.resetForm()
+                })
         },
     })
 
@@ -60,28 +59,46 @@ export const Form = () => {
                 <form onSubmit={formik.handleSubmit} className={s.formContainer}>
                     <TitleGeneral title={'contacts'}/>
 
-                    <input className={s.formInput} type="text" {...formik.getFieldProps('name')} placeholder="name"/>
+                    <input
+                        disabled={appStatus === "loading"}
+                        className={s.formInput}
+                        type="text" {...formik.getFieldProps('name')}
+                        placeholder="name"/>
 
-                    <input className={s.formInput} type="text" {...formik.getFieldProps('company')} placeholder="company"/>
+                    <input disabled={appStatus === "loading"}
+                           className={s.formInput}
+                           type="text" {...formik.getFieldProps('company')}
+                           placeholder="company"/>
 
-                    <input   {...formik.getFieldProps('email')} className={s.formInput} type="email"
-                             placeholder="email"/>
+                    <input disabled={appStatus === "loading"}
+                           {...formik.getFieldProps('email')}
+                           className={s.formInput} type="email"
+                           placeholder="email"/>
+
                     {formik.touched.email && formik.errors.email ?
                         <div style={{color: "red", fontSize: '10px'}}>{formik.errors.email}</div> : null}
 
-                    <input   {...formik.getFieldProps('otherContacts')} className={s.formInput} type="text"
-                             placeholder="other contacts"/>
+                    <input
+                        disabled={appStatus === "loading"}
+                        {...formik.getFieldProps('otherContacts')}
+                        className={s.formInput} type="text"
+                        placeholder="other contacts"/>
 
-                    <textarea {...formik.getFieldProps('message')} className={s.formTextArea} placeholder="message"/>
-
-
-
+                    <textarea
+                        disabled={appStatus === "loading"}
+                        {...formik.getFieldProps('message')}
+                        className={s.formTextArea} placeholder="message"/>
 
 
                     <Fade triggerOnce={true} direction={'down'} delay={100}
                           onVisibilityChange={onVisibilityChangeHandler}>
-                        <ButtonGeneral status={appStatus} type="submit" title={'get in touch'} callback={() => {
-                        }} style={{opacity: visible ? 1 : 0, transition: 'opacity 0.5s',width: '172px', height: '50px' }}/>
+                        <ButtonGeneral status={appStatus} type="submit" title={'send message'} callback={() => {
+                        }} style={{
+                            opacity: visible ? 1 : 0,
+                            transition: 'opacity 0.5s',
+                            width: '200px',
+                            height: '50px'
+                        }}/>
                     </Fade>
 
                 </form>

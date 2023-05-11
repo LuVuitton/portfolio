@@ -8,6 +8,7 @@ import {Remote} from "../Remote/Remote";
 import {Form} from "../Form/Form";
 import {Footer} from "../Footer/Footer";
 import {ErrorSnackbar} from "../ErrorSnackbar/ErrorSnackbar";
+import {AdditionalSkills} from "../AdditionalSkills/AdditionalSkills";
 
 const App = () => {
     // console.log('app')
@@ -32,6 +33,7 @@ const App = () => {
                 <MyProjects/>
                 <Remote/>
                 <Skills/>
+                <AdditionalSkills/>
                 <Form/>
 
             </div>

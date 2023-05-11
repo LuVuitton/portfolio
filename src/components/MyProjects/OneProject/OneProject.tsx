@@ -5,18 +5,57 @@ import {Slide} from "react-awesome-reveal";
 import {Tilt} from "react-tilt";
 
 
+export const OneProject = (props: OneProjectPropsType) => {
+
+    const [visible, setVisible] = useState(false)
+
+    const onVisibilityChangeHandler = (inView: boolean, entry: IntersectionObserverEntry) => {
+        if (inView && !visible) {
+            setVisible(true);
+        }
+    }
+
+
+    return (
+        <Slide triggerOnce={true} delay={100} onVisibilityChange={onVisibilityChangeHandler}>
+
+
+            <div className={s.mainWrapper}>
+                <Tilt options={defaultOptions}
+                      style={{opacity: visible ? 1 : 0, transition: 'opacity 0.5s', width: '100%'}}>
+                    <div className={s.image} style={props.bgImg}>
+                        <ButtonGeneral style={props.lookBtnStyle} type="button" title={'TRY'} callback={() => {
+                        }}/>
+                    </div>
+                </Tilt>
+                <h3 className={s.title}>{props.projectName}</h3>   {/*h3 сверху и снизу оставляет падинги*/}
+                <p className={s.description}>{props.description}</p>
+                <div className={s.buttons}>
+                    {/*<a href={props.gitPagesURL} target={'_blank'}>*/}
+                    {/*    <ButtonGeneral style={props.btnStyle} type="button" title={'page'} callback={() => {*/}
+                    {/*    }}/>*/}
+                    {/*</a>*/}
+                    <a href={props.gitRepositoryURL} target={'_blank'}  rel="noopener noreferrer">
+                        <ButtonGeneral style={props.btnStyle} type="button" title={'GIT code'} callback={() => {
+                        }}/>
+                    </a>
+                </div>
+            </div>
+
+
+        </Slide>
+    )
+}
+
+
 export type OneProjectPropsType = {
     projectName: string
     description: string
-    bgImg: {
-        backgroundImage: string
-    }
-    btnStyle: {
-        padding: string
-    }
-    lookBtnStyle: {
-        zIndex: string,
-    }
+    bgImg: { backgroundImage: string }
+    btnStyle: { padding: string }
+    lookBtnStyle: { zIndex: string, }
+    gitRepositoryURL: string,
+    gitPagesURL: string
 }
 const defaultOptions = {
     reverse: false,  // reverse the tilt direction
@@ -29,41 +68,4 @@ const defaultOptions = {
     reset: true,    // If the tilt effect has to be reset on exit.
     easing: "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
 
-}
-
-
-export const OneProject = (props: OneProjectPropsType) => {
-
-    const [visible, setVisible] = useState(false)
-
-    const onVisibilityChangeHandler = (inView: boolean, entry: IntersectionObserverEntry) => {
-        if (inView && !visible) {
-            setVisible(true);
-        }
-    }
-
-
-    console.log('one pro')
-    return (
-        <Slide triggerOnce={true} delay={100} onVisibilityChange={onVisibilityChangeHandler}>
-
-                <Tilt options={defaultOptions} style={{ opacity: visible ? 1 : 0, transition: 'opacity 0.5s' }}>
-                <div className={s.mainWrapper}>
-                    <div className={s.image} style={props.bgImg}>
-                        <ButtonGeneral style={props.lookBtnStyle} type="button" title={'look'} callback={() => {
-                        }}/>
-                    </div>
-                    <h3 className={s.title}>{props.projectName}</h3>   {/*h3 сверху и снизу оставляет падинги*/}
-                    <p className={s.description}>{props.description}</p>
-                    <div className={s.buttons}>
-                        <ButtonGeneral style={props.btnStyle} type="button" title={'page'} callback={() => {
-                        }}/>
-                        <ButtonGeneral style={props.btnStyle} type="button" title={'code'} callback={() => {
-                        }}/>
-                    </div>
-                </div>
-            </Tilt>
-
-        </Slide>
-    )
 }

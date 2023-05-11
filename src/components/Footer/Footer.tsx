@@ -11,9 +11,9 @@ export const Footer = () => {
         <footer className={s.mainWrapper}>
             <div className={`${sContainer.generalContainer} ${s.container}`}>
 
-                <h3 className={s.text}>Felix Tekhada</h3>
+                {/*<h3 className={s.text}>Felix Tekhada</h3>*/}
                 <NetworkIcons/>
-                <p>footer text 2013</p>
+                <p>2013</p>
 
             </div>
         </footer>

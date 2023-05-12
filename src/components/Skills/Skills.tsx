@@ -8,15 +8,12 @@ import jsImg from './../../other/icons/js.png'
 import reduxImg from './../../other/icons/redux.png'
 
     const skills = [
-        {title: 'React', description:'React is a JavaScript library for building user interfaces, released by Facebook in 2013.\n' +
-                'It\'s designed to make it easy to create reusable UI components and manage their state in a way that\'s efficient and easy to reason about.\n' +
-                'React uses a virtual DOM (document object model) to improve performance by reducing the amount of DOM manipulation required. ', img:reactImg},
-        {title: 'JavaScript', description:'Redux is a JavaScript library for managing the state of an application.\n' +
-                'It\'s designed to make it easy to keep track of changes to the state and ensure that updates are made in a predictable and efficient way.\n' +
-                'Redux uses a single store to hold the state of the entire application, with actions and reducers used to update it.', img:jsImg},
-        {title: 'Redux', description:'JavaScript is a programming language used primarily for creating dynamic, interactive web content.\n' +
-                'It was first released in 1995 and has since become one of the most widely used languages in the world.\n' +
-                'JavaScript is used for both front-end (client-side) and back-end (server-side) development.', img:reduxImg},
+        {title: 'React', description:'Developing class and functional components to build user interfaces.\n' +
+                'Working with component lifecycle and event handlers.\n' +
+                'Using React Router to manage application routing.', img:reactImg},
+        {title: 'JavaScript', description:'Typescript, ES5, ES6, Unit tests with Jest, REST-API.', img:jsImg},
+        {title: 'Redux', description:'Using both legacy Redux and RTK.\n' +
+                'Working with Redux Middleware to perform asynchronous operations.', img:reduxImg},
     ]
 
 

@@ -12,7 +12,7 @@ export type ButtonGeneralPropsType = {
 }
 
 export const ButtonGeneral = React.memo((props: ButtonGeneralPropsType) => {
-    console.log('button general')
+    // console.log('button general')
     return (
         <button
             type={props.type}

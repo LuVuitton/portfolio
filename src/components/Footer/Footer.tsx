@@ -13,7 +13,7 @@ export const Footer = () => {
 
                 {/*<h3 className={s.text}>Felix Tekhada</h3>*/}
                 <NetworkIcons/>
-                <p>2013</p>
+                <p>2023</p>
 
             </div>
         </footer>

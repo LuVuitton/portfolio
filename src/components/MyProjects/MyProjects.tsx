@@ -18,7 +18,7 @@ export const MyProjects = React.memo(() => {
             id: v1(),
             bgImg: {backgroundImage: `url(${todo})`},
             projectName: 'to do list',
-            description: 'it is To do list',
+            description: 'Developed a task manager on React with CRUD functionality and user authentication. Implemented REST API requests to fetch data and added error handling in the form of pop-ups for failed requests and form submission, using Formik for login form. Switched from Redux to Redux Toolkit during development to reduce code and improve application performance. Stored application state as an associative array, making it easier to work with data. Additionally, useCallback, React.memo, and useMemo were used for performance optimization. Material UI was used for UI design, and Jest was used for testing.',
             gitRepositoryURL: 'https://github.com/LuVuitton/1-todolist',
             gitPagesURL:''
 
@@ -27,7 +27,7 @@ export const MyProjects = React.memo(() => {
             id: v1(),
             bgImg: {backgroundImage: `url(${social})`},
             projectName: 'social network',
-            description: 'e come facebook',
+            description: 'The social network is written in class components and Legacy Redux. The application has the ability to authenticate users, edit profile, view other users\' pages, and subscribe/unsubscribe. To improve code performance and reusability, I utilized High Order Components, and for testing, I used Jest. For styling the application, I used modular CSS',
             gitRepositoryURL: 'https://github.com/LuVuitton/samurai-way-main',
             gitPagesURL:''
         }
@@ -59,7 +59,7 @@ export const MyProjects = React.memo(() => {
         <div className={s.mainWrapper} id={'projects'}>
             <div className={`${sContainer.generalContainer} ${s.container}`}>
 
-                <TitleGeneral title={'myprojects'}/>
+                <TitleGeneral title={'my projects'}/>
 
                 <div className={s.projectList}>
                     {mappedProjects}

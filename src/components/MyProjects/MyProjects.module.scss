@@ -9,6 +9,7 @@
   .container {
     flex-direction: column;
     padding: 50px 100px;
+    text-align: center;
 
     .projectList {
       gap: 30px;
@@ -16,7 +17,6 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-
     }
 
   }

@@ -25,10 +25,12 @@ export const OneProject = (props: OneProjectPropsType) => {
                 <Tilt options={defaultOptions}
                       style={{opacity: visible ? 1 : 0, transition: 'opacity 0.5s', minWidth: '300px',
                           maxWidth: '40%'}}>
+                        <a href={props.gitPagesURL} target={'_blank'} rel="noopener noreferrer">
                     <div className={s.image} style={props.bgImg}>
                         <ButtonGeneral style={props.lookBtnStyle} type="button" title={'TRY'} callback={() => {
                         }}/>
                     </div>
+                            </a>
                 </Tilt>
                 </div>
 

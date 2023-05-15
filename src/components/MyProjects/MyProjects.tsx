@@ -4,7 +4,7 @@ import sContainer from "../../common/styles/GeneralContainer.module.scss";
 import {OneProject} from "./OneProject/OneProject";
 import {TitleGeneral} from "../../common/reComponents/Title/TitleGeneral";
 import todo from './../../../src/assets/image/todo.png'
-import social from './../../../src/assets/image/social.png'
+import social from './../../other/image/socnet.png'
 import {v1} from "uuid";
 
 
@@ -29,7 +29,7 @@ export const MyProjects = React.memo(() => {
             projectName: 'social network',
             description: 'The social network is written in class components and Legacy Redux. The application has the ability to authenticate users, edit profile, view other users\' pages, and subscribe/unsubscribe. To improve code performance and reusability, I utilized High Order Components, and for testing, I used Jest. For styling the application, I used modular CSS',
             gitRepositoryURL: 'https://github.com/LuVuitton/samurai-way-main',
-            gitPagesURL:''
+            gitPagesURL:'https://luvuitton.github.io/samurai-way-main/'
         }
     ]
     const generalStyles:GeneralStylesType = {

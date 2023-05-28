@@ -3,7 +3,7 @@ import s from './MyProjects.module.scss'
 import sContainer from "../../common/styles/GeneralContainer.module.scss";
 import {OneProject} from "./OneProject/OneProject";
 import {TitleGeneral} from "../../common/reComponents/Title/TitleGeneral";
-import todo from './../../../src/assets/image/todo.png'
+import todo from './../../other/image/todo.png'
 import social from './../../other/image/socnet.png'
 import {v1} from "uuid";
 
@@ -20,7 +20,7 @@ export const MyProjects = React.memo(() => {
             projectName: 'to do list',
             description: 'Developed a task manager on React with CRUD functionality and user authentication. Implemented REST API requests to fetch data and added error handling in the form of pop-ups for failed requests and form submission, using Formik for login form. Switched from Redux to Redux Toolkit during development to reduce code and improve application performance. Stored application state as an associative array, making it easier to work with data. Additionally, useCallback, React.memo, and useMemo were used for performance optimization. Material UI was used for UI design, and Jest was used for testing.',
             gitRepositoryURL: 'https://github.com/LuVuitton/1-todolist',
-            gitPagesURL:''
+            gitPagesURL:'https://luvuitton.github.io/1-todolist/'
 
         },
         {
